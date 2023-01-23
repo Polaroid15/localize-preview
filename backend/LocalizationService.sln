@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalizationPreview.API", "LocalizationPreview.API\LocalizationPreview.API.csproj", "{37696CA1-1392-4619-BC26-2E250760F413}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D4EB44DA-005D-406A-8FAD-C03A5DB3BE53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalizationPreview.Infrastructure", "LocalizationPreview.Infrastructure\LocalizationPreview.Infrastructure.csproj", "{F6FAC956-E0E9-4064-BA66-ED7632466064}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalizationPreview.Core", "LocalizationPreview.Core\LocalizationPreview.Core.csproj", "{D90AA39E-4141-432B-8E20-A702BEC80FA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalizationPreview.Shared", "LocalizationPreview.Shared\LocalizationPreview.Shared.csproj", "{642AEAEB-0549-4A4F-AD75-FE7B5004076C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalizationPreview.UnitTests", "LocalizationPreview.UnitTests\LocalizationPreview.UnitTests.csproj", "{30984F0B-34C1-486D-9C8E-0D3DC768EDEE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{A5BE1C20-A999-47CA-A6D9-34356A342A80}"
+	ProjectSection(SolutionItems) = preProject
+		V1.0_init.sql = V1.0_init.sql
+		..\lint\linter.ruleset = ..\lint\linter.ruleset
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37696CA1-1392-4619-BC26-2E250760F413}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37696CA1-1392-4619-BC26-2E250760F413}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37696CA1-1392-4619-BC26-2E250760F413}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37696CA1-1392-4619-BC26-2E250760F413}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6FAC956-E0E9-4064-BA66-ED7632466064}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6FAC956-E0E9-4064-BA66-ED7632466064}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6FAC956-E0E9-4064-BA66-ED7632466064}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6FAC956-E0E9-4064-BA66-ED7632466064}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D90AA39E-4141-432B-8E20-A702BEC80FA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D90AA39E-4141-432B-8E20-A702BEC80FA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D90AA39E-4141-432B-8E20-A702BEC80FA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D90AA39E-4141-432B-8E20-A702BEC80FA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{642AEAEB-0549-4A4F-AD75-FE7B5004076C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{642AEAEB-0549-4A4F-AD75-FE7B5004076C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{642AEAEB-0549-4A4F-AD75-FE7B5004076C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{642AEAEB-0549-4A4F-AD75-FE7B5004076C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30984F0B-34C1-486D-9C8E-0D3DC768EDEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30984F0B-34C1-486D-9C8E-0D3DC768EDEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30984F0B-34C1-486D-9C8E-0D3DC768EDEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30984F0B-34C1-486D-9C8E-0D3DC768EDEE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{30984F0B-34C1-486D-9C8E-0D3DC768EDEE} = {D4EB44DA-005D-406A-8FAD-C03A5DB3BE53}
+	EndGlobalSection
+EndGlobal
