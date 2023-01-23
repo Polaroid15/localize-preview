@@ -16,7 +16,12 @@ public class GetListTranslationsHandler : IRequestHandler<GetListTranslationsQue
 
     public async Task<IEnumerable<TranslationViewModel>> Handle(GetListTranslationsQuery request, CancellationToken cancellationToken)
     {
-        var translations = await _translationService.GetListAsync(request.EntityName, request.LanguageCode);
+        var translations = await _translationService.FindListAsync(request.EntityName, request.LanguageCode);
+        if (translations == null || !translations.Any())
+        {
+            return new List<TranslationViewModel>();
+        }
+
         var result = translations.Select(translation => new TranslationViewModel()
         {
             Id = translation.Id,

@@ -7,8 +7,8 @@ namespace LocalizationPreview.Infrastructure.Translations;
 
 public class TranslationsRepository : ITranslationsRepository 
 {
-    private readonly ISqlRepositoryAsync _repository;
-    public TranslationsRepository(ISqlRepositoryAsync repository) 
+    private readonly ISqlRepository _repository;
+    public TranslationsRepository(ISqlRepository repository) 
     {
         _repository = repository;
     }
@@ -81,7 +81,7 @@ public class TranslationsRepository : ITranslationsRepository
         return result;
     }
 
-    public async Task<List<Translation>> GetListAsync(string entityName, string languageCode, IDbConnection connection = null,
+    public async Task<List<Translation>> FindListAsync(string entityName, string languageCode, IDbConnection connection = null,
         IDbTransaction transaction = null) 
     {
         var sql = @"SELECT *
@@ -93,6 +93,6 @@ public class TranslationsRepository : ITranslationsRepository
             LanguageCode = languageCode
         };
         var result = await _repository.QueryAsync<Translation>(sql, args, connection, transaction);
-        return result.ToList();
+        return result == null ? new List<Translation>() : result.ToList();
     }
 }

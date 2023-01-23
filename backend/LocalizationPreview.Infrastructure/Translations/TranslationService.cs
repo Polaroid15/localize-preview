@@ -123,6 +123,6 @@ public class TranslationService : ITranslationService {
     public async Task<Translation> FindAsync(long entityId, string entityName, string language) =>
         await _translationRepository.FindAsync(entityId, entityName, language);
 
-    public async Task<List<Translation>> GetListAsync(string entityName, string language) =>
-        await _translationRepository.GetListAsync(entityName, language);
+    public async Task<List<Translation>> FindListAsync(string entityName, string language) =>
+        await _translationRepository.FindListAsync(entityName, language);
 }

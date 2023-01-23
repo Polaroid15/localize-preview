@@ -8,5 +8,5 @@ public interface ITranslationService {
     Task<long> UpdateAsync(long id, TranslationServiceDto dto);
     Task<Translation> FindByIdAsync(long id);
     Task<Translation> FindAsync(long entityId, string entityName, string languageCode);
-    Task<List<Translation>> GetListAsync(string entityName, string language);
+    Task<List<Translation>> FindListAsync(string entityName, string language);
 }

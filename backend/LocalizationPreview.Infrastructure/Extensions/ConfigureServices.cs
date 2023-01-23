@@ -21,7 +21,7 @@ public static class ConfigureServices {
         SqlMapper.AddTypeHandler(JObjectHandler.Instance);
         services.AddTransient<IConnectionStringSettings, ConnectionStringSettings>();
         services.AddTransient<IConnectionFactory, ConnectionFactoryPostgreSQL>();
-        services.AddTransient<ISqlRepositoryAsync, RepositoryDapper>();
+        services.AddTransient<ISqlRepository, RepositoryDapper>();
         services.AddTransient<IOutboxRepository, OutboxRepository>();
         services.AddTransient<ITranslationsRepository, TranslationsRepository>();
         services.AddTransient<ITranslationService, TranslationService>();

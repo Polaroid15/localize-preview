@@ -6,9 +6,9 @@ using LocalizationPreview.Core.Interfaces;
 namespace LocalizationPreview.Infrastructure;
 
 public class OutboxRepository : IOutboxRepository {
-    private readonly ISqlRepositoryAsync _repository;
+    private readonly ISqlRepository _repository;
 
-    public OutboxRepository(ISqlRepositoryAsync repository) {
+    public OutboxRepository(ISqlRepository repository) {
         _repository = repository;
     }
     

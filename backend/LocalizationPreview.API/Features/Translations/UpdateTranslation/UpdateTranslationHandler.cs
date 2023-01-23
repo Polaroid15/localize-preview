@@ -13,8 +13,13 @@ public class UpdateTranslationHandler : IRequestHandler<UpdateTranslationCommand
         _translationService = translationService;
     }
 
-    public async Task<long> Handle(UpdateTranslationCommand request, CancellationToken cancellationToken)
-    {
+    public async Task<long> Handle(UpdateTranslationCommand request, CancellationToken cancellationToken) {
+        var translate = await _translationService.FindByIdAsync(request.Id);
+        if (translate == null)
+        {
+            throw new ArgumentException("Translate is not exist");
+        }
+
         var model = new TranslationServiceDto()
         {
             EntityId = request.EntityId,

@@ -5,7 +5,7 @@ using Newtonsoft.Json.Linq;
 
 namespace LocalizationPreview.API.Features.Translations.GetTranslationById;
 
-public class GetTranslationByIdHandler  : IRequestHandler<GetTranslationByIdQuery, TranslationViewModel>
+public class GetTranslationByIdHandler : IRequestHandler<GetTranslationByIdQuery, TranslationViewModel>
 {
     private readonly ITranslationService _translationService;
 
@@ -17,6 +17,11 @@ public class GetTranslationByIdHandler  : IRequestHandler<GetTranslationByIdQuer
     public async Task<TranslationViewModel> Handle(GetTranslationByIdQuery request, CancellationToken cancellationToken)
     {
         var translation = await _translationService.FindByIdAsync(request.Id);
+        if (translation == null)
+        {
+            return null;
+        }
+
         var viewModel = new TranslationViewModel()
         {
             Id = translation.Id,

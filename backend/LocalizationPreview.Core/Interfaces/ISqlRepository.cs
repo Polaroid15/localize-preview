@@ -2,7 +2,7 @@ using System.Data;
 
 namespace LocalizationPreview.Core.Interfaces; 
 
-public interface ISqlRepositoryAsync 
+public interface ISqlRepository 
 {
     Task<T> QuerySingleOrDefaultAsync<T>(string sql, object param = null, IDbConnection connection = null, IDbTransaction transaction = null);
 

@@ -17,6 +17,11 @@ public class GetTranslationHandler : IRequestHandler<GetTranslationQuery, Transl
     public async Task<TranslationViewModel> Handle(GetTranslationQuery request, CancellationToken cancellationToken)
     {
         var translation = await _translationService.FindAsync(request.EntityId, request.EntityName, request.LanguageCode);
+        if (translation == null)
+        {
+            return null;
+        }
+
         var viewModel = new TranslationViewModel()
         {
             Id = translation.Id,

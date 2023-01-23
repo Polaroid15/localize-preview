@@ -13,8 +13,14 @@ public class CreateTranslationHandler : IRequestHandler<CreateTranslationCommand
         _translationService = translationService;
     }
 
-    public async Task<long> Handle(CreateTranslationCommand request, CancellationToken cancellationToken)
+    public async Task<long> Handle(CreateTranslationCommand request, CancellationToken cancellationToken) 
     {
+        var translation = await _translationService.FindAsync(request.EntityId, request.EntityName, request.LanguageCode);
+        if (translation != null)
+        {
+            throw new ArgumentException("Translation already exist");
+        }
+
         var model = new TranslationServiceDto()
         {
             EntityId = request.EntityId,

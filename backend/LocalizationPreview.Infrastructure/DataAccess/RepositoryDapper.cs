@@ -4,7 +4,7 @@ using LocalizationPreview.Core.Interfaces;
 
 namespace LocalizationPreview.Infrastructure.DataAccess;
 
-public class RepositoryDapper : ISqlRepositoryAsync
+public class RepositoryDapper : ISqlRepository
 {
     private const int CommandTimeout = 300;
     private readonly IConnectionFactory _factory;
