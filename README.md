@@ -18,8 +18,7 @@
 
 `docker-compose up --build -d` from ./ directory
 
-### p.s. don't forget add tables ./backend/V1.0_init.sql
-Migration or init script to db will add later. 
+### p.s. don't forget add tables ./backend/V1.0_init.sql if you use docker's commands
 
 ### Swagger UI
 * http://localhost:5047/localization-api/swagger/index.html
